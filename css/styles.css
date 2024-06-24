@@ -144,15 +144,6 @@ footer ul li {
     padding-bottom: 10px;
 }
 
-
-/* .bg {
-    background-image: url("/source/kz.jpg");
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .fancy {
     display: flex;
     flex-direction: column;
@@ -175,6 +166,6 @@ footer ul li {
 
 .fancy h1.fade span {
     opacity: 1;
-} */
+}
 
 

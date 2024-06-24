@@ -12,21 +12,21 @@ const translations = {
         'resolutionContent': '',
         'charterTitle': '<h3>"ҚР ОСК ИТО" РМК Жарғысы</h3>',
 
-        'list-item-1': '',
-        'list-item-2': '',
-        'list-item-3': '',
-        'list-item-4': '',
-        'list-item-5': '',
-        'list-item-6': '',
-        'list-item-7': '',
-        'list-item-8': '',
-        'list-item-9': '',
-        'list-item-10': '',
-        'list-item-11': '',
-        'list-item-12': '',
-        'list-item-13': '',
+        'list-item-1': 'Жалпы ережелер',
+        'list-item-2': 'Кәсіпорынның заңды мәртебесі',
+        'list-item-3': 'Кәсіпорын қызметінің мәні және мақсаттары',
+        'list-item-4': 'Кәсіпорынды басқару',
+        'list-item-5': 'Кәсіпорынның мүлкі',
+        'list-item-6': 'Кәсіпорынның қызметін қаржыландыру',
+        'list-item-7': 'Кәсіпорынның жарғылық капиталы',
+        'list-item-8': 'Кәсіпорынның есепке алуы мен есептілігі',
+        'list-item-9': 'Кәсіпорынның жауапкершілігі',
+        'list-item-10': 'Еңбек ұжымымен өзара қатынас',
+        'list-item-11': 'Кәсіпорын қызметкерлеріне еңбекаұы төлеу',
+        'list-item-12': 'Кәсіпорынды қайта ұйымдастыру және тарату',
+        'list-item-13': 'Жарғыға өзгерістер мен толықтырулар енгізу тәртібі',
 
-        'desc1': '',
+        'desc1': '«Қазақстан Республикасы Орталық сайлау комиссиясының Инженерлік-техникалық орталығы» республикалық мемлекеттік кәсіпорны (бұдан әрі – Кәсіпорын) шаруашылық жүргiзу құқығындағы мемлекеттiк кәсiпорынның ұйымдық-құқықтық нысанындағы заңды тұлға болып табылады. <br> Кәсіпорын «Қазақстан Республикасы Орталық сайлау комиссиясының Инженерлік-техникалық орталығы» республикалық мемлекеттік кәсіпорнын құру туралы» Қазақстан Республикасы Үкіметінің 2005 жылғы 13 шілдедегі № 726 қаулысына сәйкес құрылды. <br> Кәсiпорынның құрылтайшысы Қазақстан Республикасының Үкiметi болып табылады. <br> Кәсiпорын мүлкіне қатысты республикалық меншiк құқығы субъектiсінің құқығын Қазақстан Республикасы Қаржы министрлігінің Мемлекеттiк мүлiк және жекешелендіру комитеті (бұдан әрi - мемлекеттiк мүлiк жөніндегі уәкiлеттi орган) жүзеге асырады. <br> Кәсіпорынды басқаруды жүзеге асыратын орган Қазақстан Республикасының Орталық сайлау комиссиясы (бұдан әрі – тиісті саланың уәкілетті органы) болып табылады. <br> Кәсіпорынның атауы: <br> мемлекеттік тілде: <br> толық - «Қазақстан Республикасы Орталық сайлау комиссиясының Инженерлік-техникалық орталығы» шаруашылық жүргізу құқығындағы республикалық мемлекеттік кәсіпорны; <br> қысқа - «Қазақстан Республикасы Орталық сайлау комиссиясының Инженерлік-техникалық орталығы» РМК; <br> орыс тілінде: <br> толық – Республиканское государственное предприятие на праве хозяйственного ведения «Инженерно-технический центр Центральной избирательной комиссии Республики Казахстан»; <br> қысқа – РГП «Инженерно-технический центр Центральной избирательной комиссии Республики Казахстан». <br> Кәсіпорынның орналасқан жері: 010000, Қазақстан Республикасы, Нұр-Сұлтан қаласы, Сарыарқа ауданы, Бейбітшілік көшесі, 4.',
         'desc2': '',
         'desc3': '',
         'desc4': '',
@@ -86,37 +86,36 @@ const translations = {
 function updateContent(language) {
     const lang = language.toLowerCase();
 
-    // Update text content
-    document.getElementById('headerTitle').innerHTML = translations[lang]['header'];
-    document.getElementById('aboutUsLink').innerHTML = translations[lang]['aboutUs'];
-    document.getElementById('newsLink').innerHTML = translations[lang]['news'];
-    document.getElementById('infoSystemsLink').innerHTML = translations[lang]['infoSystems'];
-    document.getElementById('procurementLink').innerHTML = translations[lang]['procurement'];
-    document.getElementById('antiCorruptionLink').innerHTML = translations[lang]['antiCorruption'];
-    document.getElementById('vacanciesLink').innerHTML = translations[lang]['vacancies'];
-    document.getElementById('resolutionTitle').innerHTML = translations[lang]['resolutionTitle'];
-    document.getElementById('resolutionContent').innerHTML = translations[lang]['resolutionContent'];
-    document.getElementById('charterTitle').innerHTML = translations[lang]['charterTitle'];
-
-    for (let i = 1; i <= 13; i++) {
-        const listItemElement = document.getElementById(`list-item-${i}`);
-        listItemElement.innerHTML = translations[lang][`list-item-${i}`];
+    function updateElement(id, text) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.innerHTML = text;
+        }
     }
 
+    updateElement('headerTitle', translations[lang]['header']);
+    updateElement('aboutUsLink', translations[lang]['aboutUs']);
+    updateElement('newsLink', translations[lang]['news']);
+    updateElement('infoSystemsLink', translations[lang]['infoSystems']);
+    updateElement('procurementLink', translations[lang]['procurement']);
+    updateElement('antiCorruptionLink', translations[lang]['antiCorruption']);
+    updateElement('vacanciesLink', translations[lang]['vacancies']);
+    
+    updateElement('resolutionTitle', translations[lang]['resolutionTitle']);
+    updateElement('resolutionContent', translations[lang]['resolutionContent']);
+    updateElement('charterTitle', translations[lang]['charterTitle']);
+
     for (let i = 1; i <= 13; i++) {
-        const descriptionElement = document.getElementById(`description-${i}`);
-        descriptionElement.innerHTML = translations[lang][`desc${i}`];
+        updateElement(`list-item-${i}`, translations[lang][`list-item-${i}`]);
+        updateElement(`description-${i}`, translations[lang][`desc${i}`]);
     }
 
     const kazButton = document.getElementById('kazButton');
     const rusButton = document.getElementById('rusButton');
 
-    if (lang === 'kaz') {
-        kazButton.style.fontWeight = 'bold';
-        rusButton.style.fontWeight = 'normal';
-    } else if (lang === 'rus') {
-        rusButton.style.fontWeight = 'bold';
-        kazButton.style.fontWeight = 'normal';
+    if (kazButton && rusButton) {
+        kazButton.style.fontWeight = lang === 'kaz' ? 'bold' : 'normal';
+        rusButton.style.fontWeight = lang === 'rus' ? 'bold' : 'normal';
     }
 }
 
