@@ -2,42 +2,148 @@
     width: 0;
 }
 
+*:focus {
+    outline: none;
+}
+
+body {
+    background-color: #e5e5e5; /* light gray */
+    color: #000; /* black */
+}
+
+a {
+    color: #000; /* black */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #14213d; /* dark blue */
+}
+
+.bg-light {
+    background-color: #ffffff !important; /* white */
+    color: #000; /* black */
+}
+
+.bg-info {
+    background-color: #14213d !important; /* dark blue */
+    color: #ffffff; /* white */
+}
+
+.navbar-toggler {
+    background-color: #fca311; /* orange */
+    margin: 5px;
+}
+
+.navbar-nav .nav-link {
+    padding: 1rem 0;
+    line-height: 1.5;
+    color: #ffffff; /* white */
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #fca311; /* orange */
+}
+
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    color: #ffffff; /* white */
+    background-color: #14213d; /* dark blue */
+    border-color: #14213d; /* dark blue */
+    font-weight: bold;
+    margin: 1px 0 1px 0;
+}
+
+.btn:hover {
+    background-color: #fca311; /* orange */
+    border-color: #fca311; /* orange */
+    color: #14213d; /* dark blue */
+}
+
+#headerTitle {
+    color: #000; /* black */
+}
+
+#resolutionTitle, #charterTitle {
+    color: #14213d; /* dark blue */
+}
+
+#resolutionContent {
+    color: #000; /* black */
+}
+
+.list-group-item-action {
+    color: #000; /* black */
+}
+
+.list-group-item-action.active {
+    background-color: #fca311; /* orange */
+    border-color: #fca311; /* orange */
+    color: #fff; /* white */
+}
+
+.logos img {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.logos img:hover {
+    filter: none;
+    opacity: 1;
+}
+
+/* Scroll to top button */
 .scrollTop {
     display: none;
     position: fixed;
     bottom: 30px;
     right: 30px;
     padding: 10px 15px;
-    background-color: #404040;
-    color: white;
+    background-color: #404040; /* dark gray */
+    color: #ffffff; /* white */
     border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, display 0.3s;
     border: 2px solid white;
-   }
-
-.navbar-toggler {
-    margin: 5px;
-}
-.navbar-nav .nav-link {
-    padding: 1rem 0;
-    line-height: 1.5;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #fff;
-    background-color: #17a2b8;
-}
-
-a {
-    color: #000;    
+.scrollTop:hover {
+    background-color: #fca311; /* orange */
+    border-color: #fca311; /* orange */
 }
 
 .logos {
     display: flex;
     justify-content: space-evenly;
-
 }
+
+footer {
+    background-color: #14213d; /* Dark blue */
+    color: #ffffff; /* White text */
+}
+
+footer a {
+    color: #ffffff; /* White links */
+}
+
+footer a:hover {
+    color: #fca311; /* Orange on hover */
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    padding-bottom: 10px;
+}
+
 
 /* .bg {
     background-image: url("/source/kz.jpg");

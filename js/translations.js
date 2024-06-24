@@ -85,6 +85,8 @@ const translations = {
 
 function updateContent(language) {
     const lang = language.toLowerCase();
+
+    // Update text content
     document.getElementById('headerTitle').innerHTML = translations[lang]['header'];
     document.getElementById('aboutUsLink').innerHTML = translations[lang]['aboutUs'];
     document.getElementById('newsLink').innerHTML = translations[lang]['news'];
@@ -105,7 +107,19 @@ function updateContent(language) {
         const descriptionElement = document.getElementById(`description-${i}`);
         descriptionElement.innerHTML = translations[lang][`desc${i}`];
     }
+
+    const kazButton = document.getElementById('kazButton');
+    const rusButton = document.getElementById('rusButton');
+
+    if (lang === 'kaz') {
+        kazButton.style.fontWeight = 'bold';
+        rusButton.style.fontWeight = 'normal';
+    } else if (lang === 'rus') {
+        rusButton.style.fontWeight = 'bold';
+        kazButton.style.fontWeight = 'normal';
+    }
 }
+
 
 updateContent('rus');
 

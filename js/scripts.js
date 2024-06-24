@@ -44,4 +44,3 @@ document.addEventListener('DOMContentLoaded', function() {
  
      setTimeout(fadeInHeading, 500);
  });
- 
