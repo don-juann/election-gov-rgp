@@ -1,0 +1,1 @@
+document.getElementById('list-item-1').click();

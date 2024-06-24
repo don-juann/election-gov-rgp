@@ -1,0 +1,74 @@
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+.scrollTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    background-color: #404040;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, display 0.3s;
+    border: 2px solid white;
+   }
+
+.navbar-toggler {
+    margin: 5px;
+}
+.navbar-nav .nav-link {
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff;
+    background-color: #17a2b8;
+}
+
+a {
+    color: #000;    
+}
+
+.logos {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+/* .bg {
+    background-image: url("/source/kz.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fancy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
+
+.fancy h1 {
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.fancy h1 span {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: inline-block;
+}
+
+.fancy h1.fade span {
+    opacity: 1;
+} */
+
+
