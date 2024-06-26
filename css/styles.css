@@ -76,27 +76,6 @@ hr {
     color: #000; 
 }
 
-.list-group-item-action {
-    color: #000; 
-}
-
-.list-group-item-action.active {
-    background-color: #fca311; 
-    border-color: #fca311; 
-    color: #fff; 
-}
-
-.logos img {
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: filter 0.3s ease, opacity 0.3s ease;
-}
-
-.logos img:hover {
-    filter: none;
-    opacity: 1;
-}
-
 .scrollTop {
     display: none;
     position: fixed;

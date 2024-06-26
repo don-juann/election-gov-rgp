@@ -33,6 +33,10 @@ function handleViewportWidth() {
 window.addEventListener('resize', handleViewportWidth);
 window.addEventListener('DOMContentLoaded', handleViewportWidth);
 
+var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExample'), {
+    interval: 8000,
+    wrap: true
+});
 
 // Анимация текста
 // document.addEventListener('DOMContentLoaded', function() {
