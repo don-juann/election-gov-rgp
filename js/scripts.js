@@ -39,32 +39,3 @@ var myCarousel = new bootstrap.Carousel(document.getElementById('carousel'), {
     interval: 8000,
     wrap: true
 });
-
-// Анимация текста
-// document.addEventListener('DOMContentLoaded', function() {
-//      const headings = document.querySelectorAll('.fancy h1');
-     
-//      headings.forEach((heading, index) => {
-//          let text = heading.textContent.trim();
-//          heading.textContent = '';
- 
-//          for (let i = 0; i < text.length; i++) {
-//              const span = document.createElement('span');
-//              span.textContent = text[i];
-//              heading.appendChild(span);
-//          }
-//      });
- 
-//      function fadeInHeading() {
-//          headings.forEach((heading, index) => {
-//              const spans = heading.querySelectorAll('span');
-//              spans.forEach((span, index) => {
-//                  setTimeout(() => {
-//                      span.style.opacity = 1;
-//                  }, index * 50); 
-//              });
-//          });
-//      }
- 
-//      setTimeout(fadeInHeading, 500);
-//  });

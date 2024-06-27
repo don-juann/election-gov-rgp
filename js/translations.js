@@ -22,8 +22,7 @@ const translations = {
 
         'heads': 'Басшылар',
         'principal': 'Директор',
-        'principal-sub1': 'Директор орынбасары',
-        'principal-sub2': 'Директор орынбасары',
+        'principal-sub': 'Директор орынбасары',
         'principal-name': 'Ниязов Адиль Абилевич',
         'principal-sub1-name': 'Бабанский Дмитрий Александрович',
         'principal-sub2-name': 'Калмагамбетов Айвар Жакиевич'
@@ -51,8 +50,7 @@ const translations = {
         
         'heads': 'Руководители',
         'principal': 'Директор',
-        'principal-sub1': 'Заместитель директора',
-        'principal-sub2': 'Заместитель директора',
+        'principal-sub': 'Заместитель директора',
         'principal-name': 'Ниязов Адиль Абилевич',
         'principal-sub1-name': 'Бабанский Дмитрий Александрович',
         'principal-sub2-name': 'Калмагамбетов Айвар Жакиевич'
