@@ -127,6 +127,27 @@ const charterElements = {
     }
 }
 
+const breadcrumbs = {
+    'kaz':{
+        'main-breadcrumb': 'Бас бет',
+        'about-breadcrumb': 'Біз туралы',
+        'news-breadcrumb':'Жаңалықтар',
+        'systems-breadcrumb':'Ақпараттық жүйелер',
+        'procurement-breadcrumb':'Мемлекеттік сатып алулар',
+        'anticor-breadcrumb':'Коррупцияға қарсылық',
+        'vacancy-breadcrumb':'Бос жұмыс орындары'
+    },
+    'rus':{
+        'main-breadcrumb': 'Главная',
+        'about-breadcrumb': 'О нас',
+        'news-breadcrumb':'Новости',
+        'systems-breadcrumb':'Информационные системы',
+        'procurement-breadcrumb':'Государственные закупки',
+        'anticor-breadcrumb':'Противодействие коррупции',
+        'vacancy-breadcrumb':'Вакансии'
+    }
+}
+
 function updateContent(language) {
     const lang = language.toLowerCase();
 
@@ -134,6 +155,13 @@ function updateContent(language) {
         const element = document.getElementById(id);
         if (element) {
             element.innerHTML = text;
+        }
+    }
+
+    function updateElementsByClass(className, text) {
+        const elements = document.getElementsByClassName(className);
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].innerHTML = text;
         }
     }
 
@@ -157,11 +185,18 @@ function updateContent(language) {
 
     updateElement('heads', translations[lang]['heads']);
     updateElement('principal', translations[lang]['principal']);
-    updateElement('principal-sub1', translations[lang]['principal-sub1']);
-    updateElement('principal-sub2', translations[lang]['principal-sub2']);
     updateElement('principal-name', translations[lang]['principal-name']);
     updateElement('principal-sub1-name', translations[lang]['principal-sub1-name']);
     updateElement('principal-sub2-name', translations[lang]['principal-sub2-name']);
+    updateElementsByClass('principal-sub', translations[lang]['principal-sub']);
+
+    updateElement('about-breadcrumb', breadcrumbs[lang]['about-breadcrumb']);
+    updateElement('news-breadcrumb', breadcrumbs[lang]['news-breadcrumb']);
+    updateElement('systems-breadcrumb', breadcrumbs[lang]['systems-breadcrumb']);
+    updateElement('procurement-breadcrumb', breadcrumbs[lang]['procurement-breadcrumb']);
+    updateElement('anticor-breadcrumb', breadcrumbs[lang]['anticor-breadcrumb']);
+    updateElement('vacancy-breadcrumb', breadcrumbs[lang]['vacancy-breadcrumb']);
+    updateElementsByClass('main-breadcrumb', breadcrumbs[lang]['main-breadcrumb']);
 
     updateElement('scrollTop', translations[lang]['scrollTop']);
 
