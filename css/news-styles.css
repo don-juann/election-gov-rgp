@@ -1,0 +1,36 @@
+.news-item {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.news-item img {
+    width: 30%;
+    float: left;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.news-item-content {
+    overflow: hidden; 
+}
+
+.news-item-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-item-date {
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.news-item-description {
+    margin-bottom: 0;
+}
