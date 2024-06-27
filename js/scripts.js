@@ -33,6 +33,8 @@ function handleViewportWidth() {
 window.addEventListener('resize', handleViewportWidth);
 window.addEventListener('DOMContentLoaded', handleViewportWidth);
 
+
+// Карусель
 var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExample'), {
     interval: 8000,
     wrap: true

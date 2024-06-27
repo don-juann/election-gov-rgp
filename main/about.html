@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="scrollTop" onclick="scrollToTop()" style="z-index: 99">Наверх</div>
+    <div class="scrollTop" onclick="scrollToTop()" style="z-index: 99" id="scrollTop"></div>
 
     <!-- logo and language choice -->
     <header class="bg-light py-2">
@@ -65,22 +65,22 @@
     
     <!-- Rukovoditeli -->
     <div class="container-fluid bg-white py-3 text-center">
-        <h3>Руководители</h5>
+        <h3 id="heads"></h3>
         <div class="row p-5">
             <div class="col-md-4">
                 <img width="100" height="100" src="/source/profile.png" alt="pfp1">
-                <h5>Ниязов Адиль Абилевич</h5>
-                <p>Директор</p>
+                <h5 id="principal-name"></h5>
+                <p id="principal"></p>
             </div>
             <div class="col-md-4">
                 <img width="100" height="100" src="/source/profile.png" alt="pfp1">
-                <h5>Бабанский Дмитрий Александрович</h5>
-                <p>Заместитель директора</p>
+                <h5 id="principal-sub1-name"></h5>
+                <p id="principal-sub1"></p>
             </div>
             <div class="col-md-4">
                 <img width="100" height="100" src="/source/profile.png" alt="pfp1">
-                <h5>Калмагамбетов Айвар Жакиевич</h5>
-                <p>Заместитель директора</p>
+                <h5 id="principal-sub2-name"></h5>
+                <p id="principal-sub2"></p>
             </div>
         </div>            
     </div>
