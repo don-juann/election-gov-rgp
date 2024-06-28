@@ -2,13 +2,13 @@ const translations = {
     'kaz': {
         'scrollTop':'Төбеге',
 
-        'header': '«Қазақстан Республикасы Орталық Сайлау <br> Комиссиясының Инженерлік-Техникалық Орталығы» РМК',
-        'aboutUs': 'Біз туралы',
-        'news': 'Жаңалықтар',
-        'infoSystems': 'Ақпараттық жүйелер',
-        'procurement': 'Мемлекеттік сатып алулар',
-        'antiCorruption': 'Коррупцияға қарсылық',
-        'vacancies': 'Бос жұмыс орындары',
+        'headerTitle': '«Қазақстан Республикасы Орталық Сайлау <br> Комиссиясының Инженерлік-Техникалық Орталығы» РМК',
+        'aboutUsLink': 'Біз туралы',
+        'newsLink': 'Жаңалықтар',
+        'infoSystemsLink': 'Ақпараттық жүйелер',
+        'procurementLink': 'Мемлекеттік сатып алулар',
+        'antiCorruptionLink': 'Коррупцияға қарсылық',
+        'vacanciesLink': 'Бос жұмыс орындары',
 
         'resolutionTitle': '<h3>"ҚР ОСК ИТО" РМК ҚҰРУ ТУРАЛЫ ҚАУЛЫ</h3>',
         'resolutionContent': '<h4>«Қазақстан Республикасы Орталық сайлау комиссиясының Инженерлiк-техникалық орталығы» республикалық мемлекеттiк кәсiпорнын құру туралы Қазақстан Республикасы Үкіметінің 2005 жылғы 13 шілдедегі N 726 қаулысы</h4> <b>Қазақстан Республикасының " Мемлекеттiк кәсiпорын туралы " 1995 жылғы 19 маусымдағы және " Мемлекеттiк сатып алу туралы " 2002 жылғы 16 мамырдағы Заңдарына сәйкес Қазақстан Республикасының Үкiметi ҚАУЛЫ ЕТЕДI: </b><br> <ol> <li>"Қазақстан Республикасы Орталық сайлау комиссиясының Инженерлiк-техникалық орталығы" шаруашылық жүргiзу құқығындағы республикалық мемлекеттiк кәсiпорны (бұдан әрi - Кәсiпорын) құрылсын. </li> <li>Қазақстан Республикасы Орталық сайлау комиссиясы (келiсiм бойынша) Кәсiпорынның мемлекеттiк басқару органы болып белгiленсiн. </li> <li>Кәсiпорын қызметiнiң негiзгi мәнi электрондық сайлау жүйесi инфрақұрылымының объектiлерi торабын ұстау және дамыту саласында шаруашылық қызметтi жүзеге асыру болып белгiленсiн. </li> <li>Қазақстан Республикасы Орталық сайлау комиссиясы (келiсiм бойынша) Қазақстан Республикасының заңнамасында белгiленген тәртiппен: </li> <ul style="list-style: none;"> <li>1) Кәсiпорынның жарғысын Қазақстан Республикасы Қаржы министрлiгiнiң Мемлекеттiк мүлiк және жекешелендiру комитетiне бекiтуге енгiзсiн; </li> <li>2) Кәсiпорынның әдiлет органдарында мемлекеттiк тiркелуiн қамтамасыз етсiн; </li> <li>3) Осы қаулыдан туындайтын өзге де шараларды қабылдасын. </li> </ul> <li>Қазақстан Республикасы Орталық сайлау комиссиясы (келiсiм бойынша) Қазақстан Республикасы Қаржы министрлiгiнiң Мемлекеттiк мүлiк және жекешелендiру комитетiмен бiрлесiп, Қазақстан Республикасының заңнамасында белгiленген тәртiппен 2005 жылға арналған республикалық бюджетте 003 "Инженерлiк-техникалық орталық құру" республикалық бюджеттiк бағдарламасы бойынша көзделген қаражат шегiнде Кәсiпорынның жарғылық капиталын қалыптастырсын. </li> <li>Облыстардың, Нұр-Сұлтан және Алматы қалаларының әкiмдерi құрылған Кәсiпорынға және оның аумақтық филиалдарына жабдықтар мен инженерлiк-техникалық персоналды орналастыруға қажеттi санда жалдау негiзiнде қызметтiк алаңдар берсiн. </li> <li>Күші жойылды - ҚР Үкіметінің 05.08.2013 № 796 қаулысымен. </li> <li>Осы қаулы қол қойылған күнiнен бастап қолданысқа енгiзiледi. </li> </ol> <i> &emsp;Қазақстан Республикасының <br>&emsp;Премьер-Министрі</i>',
@@ -30,13 +30,13 @@ const translations = {
     'rus': {
         'scrollTop': 'Наверх', 
 
-        'header': 'РГП «Инженерно-технический центр <br> Центральной избирательной комиссии Республики Казахстан»',
-        'aboutUs': 'О нас',
-        'news': 'Новости',
-        'infoSystems': 'Информационные системы',
-        'procurement': 'Государственные закупки',
-        'antiCorruption': 'Противодействие коррупции',
-        'vacancies': 'Вакансии',
+        'headerTitle': 'РГП «Инженерно-технический центр <br> Центральной избирательной комиссии Республики Казахстан»',
+        'aboutUsLink': 'О нас',
+        'newsLink': 'Новости',
+        'infoSystemsLink': 'Информационные системы',
+        'procurementLink': 'Государственные закупки',
+        'antiCorruptionLink': 'Противодействие коррупции',
+        'vacanciesLink': 'Вакансии',
 
         'footerContacts': 'Контакты',
         'footerPhone': 'Телефон доверия: 32-31-69',
@@ -172,10 +172,10 @@ const systems = {
 
 const anticor = {
     'kaz': {
-        'policy': '',
-        'policy-text': '',
+        'policy': 'СЫБАЙЛАС ЖЕМҚОРЛЫҚҚА ҚАРСЫ САЯСАТ',
+        'policy-text': '"Қазақстан Республикасы Орталық сайлау комиссиясының Инженерлік-техникалық орталығы" ШЖҚ РМК "Сыбайлас жемқорлыққа қарсы іс-қимыл туралы" Қазақстан Республикасының Заңына 16-баптың 3-тармағын толықтыруға байланысты (квазимемлекеттік сектор субъектілерінде сыбайлас жемқорлыққа қарсы комплаенс-қызметтердің функцияларын орындайтын құрылымдық бөлімшелер айқындалады, негізгі міндеті тиісті ұйымның және оның қызметкерлерінің Қазақстан Республикасының Сыбайлас жемқорлыққа қарсы іс-қимыл туралы заңнамасын сақтауын қамтамасыз ету болып табылады) персоналмен жұмыс және іс жүргізу жөніндегі бөлім басшысына Комплаенс-офицер өкілеттігін беру туралы бұйрық шығарды (31.12.2021 ж. №71 бұйрық). <br> Комплаенс-офицер қызметінің негізгі мақсаты "ҚР ОСК ИТО" ШЖҚ РМК мен оның қызметкерлерінің "сыбайлас жемқорлыққа қарсы іс-қимыл туралы" Қазақстан Республикасының заңнамасын сақтауын қамтамасыз ету, сондай-ақ сыбайлас жемқорлыққа қарсы іс-шаралардың іске асырылуына мониторинг жүргізу болып табылады. <br> "ҚР ОСК ИТЦ" ШЖҚ РМК жүйесінде сыбайлас жемқорлыққа қарсы іс-қимылға қатысты барлық мәселелер бойынша сіз комплаенс-офицерге телефон арқылы хабарласа аласыз: <br> Аппазов Қазбек Ербасарұлы <br> <b>Телефон:</b> <u>+7 (7172) 32-06-75</u> <br> <b>Эл.Пошта:</b> komplaens@saylau.kz <br> Сондай-ақ, "ҚР Сыбайлас жемқорлыққа қарсы іс-қимыл агенттігінің" сенім телефоны бойынша хабарласа аласыз: <u>1424</u>',
         'link-header': 'Пайдалы сілтемелер:',
-        'links': ''
+        'links': '<ul> <li class="my-1"><a href="https://www.election.gov.kz/rus/rgp/docs/1_zakon.pdf"><u>"Сыбайлас жемқорлыққа қарсы іс-қимыл туралы"ҚР Заңы;</u></a></li> <li class="my-1"><a href="https://www.election.gov.kz/rus/rgp/docs/2_koncepcia.pdf"><u>Қазақстан Республикасының Сыбайлас жемқорлыққа қарсы саясатының 2022-2026 жылдарға арналған тұжырымдамасы (Қазақстан Республикасы Президентінің 2022 жылғы 02 ақпандағы №802 Жарлығы);</u></a></li> <li class="my-1"><a href="https://www.election.gov.kz/rus/rgp/docs/3_tip_prav.pdf"><u>Сыбайлас жемқорлық тәуекелдеріне ішкі талдау жүргізудің үлгілік қағидалары (ҚР Мемлекеттік қызмет істері және сыбайлас жемқорлыққа қарсы іс-қимыл агенттігі Төрағасының 2016 жылғы 19 қазандағы №12 бұйрығы);</u></a></li> <li class="my-1"><a href="https://www.election.gov.kz/rus/rgp/docs/4_prikaz.pdf"><u>Сыбайлас жемқорлыққа қарсы қызмет туралы "ҚР ОСК ИТО" ШЖҚ РМК 31.12.2021 ж. №71 бұйрығы;</u></a></li> <li class="my-1"><a href="https://www.election.gov.kz/rus/rgp/docs/5_plan_mer.pdf"><u>2022 жылға арналған сыбайлас жемқорлыққа қарсы іс-шаралар жоспары "ҚР ОСК ИТО"ШЖҚ РМК;</u></a></li> </ul>'
     },
     'rus': {
         'policy': 'АНТИКОРРУПЦИОННАЯ ПОЛИТИКА',
@@ -184,6 +184,52 @@ const anticor = {
         'links': '<ul> <li class="my-1"><a href="https://www.election.gov.kz/rus/rgp/docs/1_zakon.pdf"><u>Закон РК «О противодействий коррупции»;</u></a></li> <li class="my-1"><a href="https://www.election.gov.kz/rus/rgp/docs/2_koncepcia.pdf"><u>Концепция антикоррупционной политики Республики Казахстан на 2022-2026 гг. (Указ Президента Республики Казахстан от 02 февраля 2022 года №802);</u></a></li> <li class="my-1"><a href="https://www.election.gov.kz/rus/rgp/docs/3_tip_prav.pdf"><u>Типовые правила проведения внутреннего анализа коррупционных рисков (Приказ Председателя Агентства РК по делам государственной службы и противодействию коррупции от 19 октября 2016 года №12);</u></a></li> <li class="my-1"><a href="https://www.election.gov.kz/rus/rgp/docs/4_prikaz.pdf"><u>Приказ РГП на ПХВ «ИТЦ ЦИК РК» об антикоррупционной деятельности №71 от 31.12.2021 г.;</u></a></li> <li class="my-1"><a href="https://www.election.gov.kz/rus/rgp/docs/5_plan_mer.pdf"><u>План мероприятий по антикоррупционной деятельности на 2022 год РГП на ПХВ «ИТЦ ЦИК РК»;</u></a></li> </ul>'
     }
 }
+
+const vacancy = {
+    'kaz': {
+        'intro-header': 'Құрметті пайдаланушы!',
+        'intro-message': 'Талаптар: <ul> <li>Сенімді қарым-қатынас және келіссөздер дағдылары.</li> <li>Мақсаттар мен нәтижелерге қол жеткізуге деген ұмтылыс.</li> <li>CRM жүйелерімен жұмыс істеудің негізгі принциптерін білу құпталады.</li> </ul> Шарттар: <ul> <li>ҚР ЕК сәйкес ресми жұмысқа орналастыру.</li> <li>Бәсекеге қабілетті жалақы + жоспарды орындау үшін бонустар.</li> <li>Қарқынды дамып келе жатқан компаниядағы даму және кәсіби өсу.</li> <li>Кеңседе жұмыс істеудің ыңғайлы шарттары.</li> </ul>',
+        'FIO-label': 'Толық аты-жөні',
+        'email-label': 'Электронды пошта',
+        'phone-label': 'Байланыс телефоны',
+        'xp-label': 'Жұмыс тәжірибесі',
+        'job-label': 'Лауазымы',
+        'vacancy-submit': 'Жіберу',
+        'xp-opt': 'Таңдау',
+        'xp-opt1': 'Тәжірибе жоқ',
+        'xp-opt2': '1-3 жыл арасында',
+        'xp-opt3': '3-6 жыл арасында',
+        'xp-opt4': '6 жылдан көп',
+        'job-opt': 'Таңдау',
+        'job-opt1': '',
+        'job-opt2': '',
+        'job-opt3': '',
+        'job-opt4': '',
+        // Add more labels as needed
+    },
+    'rus': {
+        'intro-header': 'Уважаемый пользователь!',
+        'intro-message': 'Требования: <br> <ul> <li>Уверенные навыки коммуникации и переговоров.</li> <li>Желание достигать поставленных целей и результатов.</li> <li>Знание базовых принципов работы с CRM системами приветствуется.</li> </ul> Условия: <br> <ul> <li>Официальное трудоустройство согласно ТК РК.</li> <li>Конкурентоспособная заработная плата + бонусы за выполнение плана.</li> <li>Развитие и профессиональный рост в динамично развивающейся компании.</li> <li>Комфортные условия работы в офисе.</li> </ul>',
+        'FIO-label': 'ФИО',
+        'email-label': 'Электронная почта',
+        'phone-label': 'Контактный телефон',
+        'xp-label': 'Опыт работы',
+        'job-label': 'Должность',
+        'vacancy-submit': 'Отправить',
+        'xp-opt': 'Выбрать',
+        'xp-opt1': 'Нет опыта',
+        'xp-opt2': 'От 1 до 3 лет',
+        'xp-opt3': 'От 3 до 6 лет',
+        'xp-opt4': 'Более 6 лет',
+        'job-opt': 'Выбрать',
+        'job-opt1': '',
+        'job-opt2': '',
+        'job-opt3': '',
+        'job-opt4': '',
+        // Add more labels as needed
+    }
+};
+
 
 function updateContent(language) {
     const lang = language.toLowerCase();
@@ -201,14 +247,14 @@ function updateContent(language) {
             elements[i].innerHTML = text;
         }
     }
-
-    updateElement('headerTitle', translations[lang]['header']);
-    updateElement('aboutUsLink', translations[lang]['aboutUs']);
-    updateElement('newsLink', translations[lang]['news']);
-    updateElement('infoSystemsLink', translations[lang]['infoSystems']);
-    updateElement('procurementLink', translations[lang]['procurement']);
-    updateElement('antiCorruptionLink', translations[lang]['antiCorruption']);
-    updateElement('vacanciesLink', translations[lang]['vacancies']);
+    
+    updateElement('headerTitle', translations[lang]['headerTitle']);
+    updateElement('aboutUsLink', translations[lang]['aboutUsLink']);
+    updateElement('newsLink', translations[lang]['newsLink']);
+    updateElement('infoSystemsLink', translations[lang]['infoSystemsLink']);
+    updateElement('procurementLink', translations[lang]['procurementLink']);
+    updateElement('antiCorruptionLink', translations[lang]['antiCorruptionLink']);
+    updateElement('vacanciesLink', translations[lang]['vacanciesLink']);
     
     updateElement('resolutionTitle', translations[lang]['resolutionTitle']);
     updateElement('resolutionContent', translations[lang]['resolutionContent']);
@@ -256,6 +302,26 @@ function updateContent(language) {
         updateElement(`list-item-${i}`, charterElements[lang][`list-item-${i}`]);
         updateElement(`description-${i}`, charterElements[lang][`desc${i}`]);
     }
+
+    updateElement('intro-header', vacancy[lang]['intro-header']);
+    updateElement('intro-message', vacancy[lang]['intro-message']);
+    updateElement('FIO-label', vacancy[lang]['FIO-label']);
+    updateElement('email-label', vacancy[lang]['email-label']);
+    updateElement('phone-label', vacancy[lang]['phone-label']);
+    updateElement('xp-label', vacancy[lang]['xp-label']);
+    updateElement('job-label', vacancy[lang]['job-label']);
+    updateElement('vacancy-submit', vacancy[lang]['vacancy-submit']);
+    updateElement('xp-opt', vacancy[lang]['xp-opt']);
+    updateElement('xp-opt1', vacancy[lang]['xp-opt1']);
+    updateElement('xp-opt2', vacancy[lang]['xp-opt2']);
+    updateElement('xp-opt3', vacancy[lang]['xp-opt3']);
+    updateElement('xp-opt4', vacancy[lang]['xp-opt4']);
+    updateElement('job-opt', vacancy[lang]['job-opt']);
+    updateElement('job-opt1', vacancy[lang]['job-opt1']);
+    updateElement('job-opt2', vacancy[lang]['job-opt2']);
+    updateElement('job-opt3', vacancy[lang]['job-opt3']);
+    updateElement('job-opt4', vacancy[lang]['job-opt4']);
+    
 
     const kazButton = document.getElementById('kazButton');
     const rusButton = document.getElementById('rusButton');
