@@ -62,7 +62,96 @@
         </ul>
     </div>
 
-    <!-- add more things -->
+    <!-- Section for Inputs and Results -->
+    <div class="container-fluid bg-white" style="padding: 15px 10% 15px 10%;">
+        <div class="row">
+            <h3 class="text-center mb-3" id="procurementTitle">Сведения о государственных закупках</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <form>
+                    <div class="mb-2">
+                        <label for="documentName" class="form-label" id="documentNameLabel">Название документа</label>
+                        <input type="text" class="form-control" id="documentName">
+                    </div>
+                    <div class="mb-2">
+                        <label for="publicationPeriod" class="form-label" id="publicationPeriodLabel">Период публикации</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="startDate" onfocus="(this.type='date')" onblur="(this.type='text')">
+                            <span class="input-group-text">-</span>
+                            <input type="text" class="form-control" id="endDate" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <label for="type" class="form-label" id="typeLabel">Тип</label>
+                        <select class="form-select" id="type">
+                            <option value="" id="type-opt"></option>
+                            <option value="1" id="type-opt1"></option>
+                            <option value="2" id="type-opt2"></option>
+                            <option value="3" id="type-opt3"></option>
+                            <option value="4" id="type-opt4"></option>
+                            <!-- Add options here -->
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label for="direction" class="form-label" id="directionLabel">Направления</label>
+                        <select class="form-select" id="direction">
+                            <option value="" id="direction-opt"></option>
+                            <option value="1" id="direction-opt1"></option>
+                            <option value="2" id="direction-opt2"></option>
+                            <option value="3" id="direction-opt3"></option>
+                            <option value="4" id="direction-opt4"></option>
+                            <!-- Add options here -->
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label for="activityCategory" class="form-label" id="activityCategoryLabel">Категория деятельности</label>
+                        <select class="form-select" id="activityCategory">
+                            <option value="" id="category-opt"></option>
+                            <option value="1" id="category-opt1"></option>
+                            <option value="2" id="category-opt2"></option>
+                            <option value="3" id="category-opt3"></option>
+                            <option value="4" id="category-opt4"></option>
+                            <!-- Add options here -->
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" id="vacancyDocumentLabel">Документ для вакансии</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="vacancyDocument" id="vacancyYes" value="Да">
+                                <label class="form-check-label" for="vacancyYes" id="vacancyYesOption">Да</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="vacancyDocument" id="vacancyNo" value="Нет">
+                                <label class="form-check-label" for="vacancyNo" id="vacancyNoOption">Нет</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-4" id="submitButton">ПОДТВЕРДИТЬ</button>
+                </form>
+            </div>
+            <div class="col-md-8">
+                <div class="result-item mb-3 p-3 border">
+                    <h3>Item 1</h3>
+                    <p>Description of Item 1 and so on bla bla</p>
+                </div>
+                <div class="result-item mb-3 p-3 border">
+                    <h3>Item 2</h3>
+                    <p>Description of Item 2 and so on bla bla</p>
+                </div>
+                <div class="result-item mb-3 p-3 border">
+                    <h3>Item 3</h3>
+                    <p>Description of Item 3 and so on bla bla</p> 
+                </div>
+                <div class="result-item mb-3 p-3 border">
+                    <h3>Item 4</h3>
+                    <p>Description of Item 4 and so on bla bla</p> 
+                </div>
+            </div>
+        </div>
+        
+    </div>
 
     <!-- Footer, Address, Map -->
     <footer class="bg-dark text-white pt-5 pb-4">

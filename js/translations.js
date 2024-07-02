@@ -123,7 +123,7 @@ const charterElements = {
         'desc13': 'Изменения и дополнения в Устав Предприятия вносятся приказом уполномоченного органа по государственному имуществу по представлению уполномоченного органа соответствующей отрасли.',
         
     }
-}
+};
 
 const breadcrumbs = {
     'kaz':{
@@ -144,7 +144,7 @@ const breadcrumbs = {
         'anticor-breadcrumb':'Противодействие коррупции',
         'vacancy-breadcrumb':'Вакансии'
     }
-}
+};
 
 const systems = {
     'kaz': {
@@ -168,7 +168,7 @@ const systems = {
         'systemp3': 'Интернет-ресурс ЦИК РК создан в целях обеспечения доступа гражданам, юридическим лицам, органам государственной власти и общественности к информации о деятельности ЦИК РК, а также продвижения информационного имиджа ЦИК РК. <br> Техническое сопровождение функционирования интернет-ресурса ЦИК РК, его программно-техническая поддержка, а также внесение текущих изменений осуществляется Республиканским государственным предприятием на праве хозяйственного ведения «Инженерно-технический центр Центральной избирательной комиссии Республики Казахстан» (далее - РГП «ИТЦ ЦИК РК»). <br> Информация, размещаемая на интернет-ресурсе ЦИК РК, публикуется на государственном и русском языках. Web-страница интернет-ресурса ЦИК РК ведется также на английском языке.',
         'systemp4': 'Разработанный РГП функционал Интернет-ресурса ЦИК РК был разработан для отображения хода регистрация выборщиков и отображения подведения итогов голосования. <br> Функционал позволил в режиме реального времени наблюдать за ходом регистрации выборщиков в регионах для всех пользователей Интернет-ресурса ЦИК РК, по окончанию регистрации и голосования, предоставлялась возможность посмотреть предварительные итоги голосования.'
     }
-}
+};
 
 const anticor = {
     'kaz': {
@@ -183,7 +183,7 @@ const anticor = {
         'link-header': 'Полезные ссылки:',
         'links': '<ul> <li class="my-1"><a href="https://www.election.gov.kz/rus/rgp/docs/1_zakon.pdf"><u>Закон РК «О противодействий коррупции»;</u></a></li> <li class="my-1"><a href="https://www.election.gov.kz/rus/rgp/docs/2_koncepcia.pdf"><u>Концепция антикоррупционной политики Республики Казахстан на 2022-2026 гг. (Указ Президента Республики Казахстан от 02 февраля 2022 года №802);</u></a></li> <li class="my-1"><a href="https://www.election.gov.kz/rus/rgp/docs/3_tip_prav.pdf"><u>Типовые правила проведения внутреннего анализа коррупционных рисков (Приказ Председателя Агентства РК по делам государственной службы и противодействию коррупции от 19 октября 2016 года №12);</u></a></li> <li class="my-1"><a href="https://www.election.gov.kz/rus/rgp/docs/4_prikaz.pdf"><u>Приказ РГП на ПХВ «ИТЦ ЦИК РК» об антикоррупционной деятельности №71 от 31.12.2021 г.;</u></a></li> <li class="my-1"><a href="https://www.election.gov.kz/rus/rgp/docs/5_plan_mer.pdf"><u>План мероприятий по антикоррупционной деятельности на 2022 год РГП на ПХВ «ИТЦ ЦИК РК»;</u></a></li> </ul>'
     }
-}
+};
 
 const vacancy = {
     'kaz': {
@@ -230,6 +230,70 @@ const vacancy = {
     }
 };
 
+const procurement = {
+    'kaz': {
+        'title': 'Мемлекеттік сатып алу туралы мәлімет',
+        'documentNameLabel': 'Құжаттың атауы',
+        'documentNamePlaceholder': 'Кілт сөздер',
+        'publicationPeriodLabel': 'Басылым кезеңі',
+        'startDatePlaceholder': 'Басталу күні',
+        'endDatePlaceholder': 'Аяқталу күні',
+        'typeLabel': 'Түрі',
+        'directionLabel': 'Бағыттар',
+        'activityCategoryLabel': 'Қызмет санаты',
+        'vacancyDocumentLabel': 'Жұмыс құжаты',
+        'vacancyYesOption': 'Иә',
+        'vacancyNoOption': 'Жоқ',
+        'submitButton': 'Растау',
+        'type-opt': 'Таңдау',
+        'type-opt1': '',
+        'type-opt2': '',
+        'type-opt3': '',
+        'type-opt4': '',
+        'direction-opt': 'Таңдау',
+        'direction-opt1': '',
+        'direction-opt2': '',
+        'direction-opt3': '',
+        'direction-opt4': '',
+        'category-opt': 'Таңдау',
+        'category-opt1': '',
+        'category-opt2': '',
+        'category-opt3': '',
+        'category-opt4': ''
+
+    },
+    'rus': {
+        'title': 'Сведения о государственных закупках',
+        'documentNameLabel': 'Название документа',
+        'documentNamePlaceholder': 'Ключевые слова',
+        'publicationPeriodLabel': 'Период публикации',
+        'startDatePlaceholder': 'Дата начала',
+        'endDatePlaceholder': 'Дата окончания',
+        'typeLabel': 'Тип',
+        'directionLabel': 'Направления',
+        'activityCategoryLabel': 'Категория деятельности',
+        'vacancyDocumentLabel': 'Документ для вакансии',
+        'vacancyYesOption': 'Да',
+        'vacancyNoOption': 'Нет',
+        'submitButton': 'ПОДТВЕРДИТЬ',
+        'type-opt': 'Выбрать',
+        'type-opt1': '',
+        'type-opt2': '',
+        'type-opt3': '',
+        'type-opt4': '',
+        'direction-opt': 'Выбрать',
+        'direction-opt1': '',
+        'direction-opt2': '',
+        'direction-opt3': '',
+        'direction-opt4': '',
+        'category-opt': 'Выбрать',
+        'category-opt1': '',
+        'category-opt2': '',
+        'category-opt3': '',
+        'category-opt4': ''
+    }
+};
+
 
 function updateContent(language) {
     const lang = language.toLowerCase();
@@ -245,6 +309,13 @@ function updateContent(language) {
         const elements = document.getElementsByClassName(className);
         for (let i = 0; i < elements.length; i++) {
             elements[i].innerHTML = text;
+        }
+    }
+
+    function updateElementPlaceholder(id, placeholder) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.placeholder = placeholder;
         }
     }
     
@@ -322,6 +393,23 @@ function updateContent(language) {
     updateElement('job-opt3', vacancy[lang]['job-opt3']);
     updateElement('job-opt4', vacancy[lang]['job-opt4']);
     
+    updateElement('procurementTitle', procurement[lang]['title']);
+    updateElement('documentNameLabel', procurement[lang]['documentNameLabel']);
+    updateElement('publicationPeriodLabel', procurement[lang]['publicationPeriodLabel']);
+    updateElement('typeLabel', procurement[lang]['typeLabel']);
+    updateElement('directionLabel', procurement[lang]['directionLabel']);
+    updateElement('activityCategoryLabel', procurement[lang]['activityCategoryLabel']);
+    updateElement('vacancyDocumentLabel', procurement[lang]['vacancyDocumentLabel']);
+    updateElement('vacancyYesOption', procurement[lang]['vacancyYesOption']);
+    updateElement('vacancyNoOption', procurement[lang]['vacancyNoOption']);
+    updateElement('submitButton', procurement[lang]['submitButton']);
+    updateElementPlaceholder('documentName', procurement[lang]['documentNamePlaceholder']);
+    updateElementPlaceholder('startDate', procurement[lang]['startDatePlaceholder']);
+    updateElementPlaceholder('endDate', procurement[lang]['endDatePlaceholder']);
+    updateElement('type-opt', procurement[lang]['type-opt']);
+    updateElement('direction-opt', procurement[lang]['direction-opt']);
+    updateElement('category-opt', procurement[lang]['category-opt']);
+
 
     const kazButton = document.getElementById('kazButton');
     const rusButton = document.getElementById('rusButton');
