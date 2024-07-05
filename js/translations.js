@@ -238,28 +238,7 @@ const procurement = {
         'publicationPeriodLabel': 'Басылым кезеңі',
         'startDatePlaceholder': 'Басталу күні',
         'endDatePlaceholder': 'Аяқталу күні',
-        'typeLabel': 'Түрі',
-        'directionLabel': 'Бағыттар',
-        'activityCategoryLabel': 'Қызмет санаты',
-        'vacancyDocumentLabel': 'Жұмыс құжаты',
-        'vacancyYesOption': 'Иә',
-        'vacancyNoOption': 'Жоқ',
         'submitButton': 'Растау',
-        'type-opt': 'Таңдау',
-        'type-opt1': '',
-        'type-opt2': '',
-        'type-opt3': '',
-        'type-opt4': '',
-        'direction-opt': 'Таңдау',
-        'direction-opt1': '',
-        'direction-opt2': '',
-        'direction-opt3': '',
-        'direction-opt4': '',
-        'category-opt': 'Таңдау',
-        'category-opt1': '',
-        'category-opt2': '',
-        'category-opt3': '',
-        'category-opt4': ''
 
     },
     'rus': {
@@ -269,28 +248,7 @@ const procurement = {
         'publicationPeriodLabel': 'Период публикации',
         'startDatePlaceholder': 'Дата начала',
         'endDatePlaceholder': 'Дата окончания',
-        'typeLabel': 'Тип',
-        'directionLabel': 'Направления',
-        'activityCategoryLabel': 'Категория деятельности',
-        'vacancyDocumentLabel': 'Документ для вакансии',
-        'vacancyYesOption': 'Да',
-        'vacancyNoOption': 'Нет',
-        'submitButton': 'ПОДТВЕРДИТЬ',
-        'type-opt': 'Выбрать',
-        'type-opt1': '',
-        'type-opt2': '',
-        'type-opt3': '',
-        'type-opt4': '',
-        'direction-opt': 'Выбрать',
-        'direction-opt1': '',
-        'direction-opt2': '',
-        'direction-opt3': '',
-        'direction-opt4': '',
-        'category-opt': 'Выбрать',
-        'category-opt1': '',
-        'category-opt2': '',
-        'category-opt3': '',
-        'category-opt4': ''
+        'submitButton': 'ПОДТВЕРДИТЬ'
     }
 };
 
@@ -396,19 +354,10 @@ function updateContent(language) {
     updateElement('procurementTitle', procurement[lang]['title']);
     updateElement('documentNameLabel', procurement[lang]['documentNameLabel']);
     updateElement('publicationPeriodLabel', procurement[lang]['publicationPeriodLabel']);
-    updateElement('typeLabel', procurement[lang]['typeLabel']);
-    updateElement('directionLabel', procurement[lang]['directionLabel']);
-    updateElement('activityCategoryLabel', procurement[lang]['activityCategoryLabel']);
-    updateElement('vacancyDocumentLabel', procurement[lang]['vacancyDocumentLabel']);
-    updateElement('vacancyYesOption', procurement[lang]['vacancyYesOption']);
-    updateElement('vacancyNoOption', procurement[lang]['vacancyNoOption']);
     updateElement('submitButton', procurement[lang]['submitButton']);
     updateElementPlaceholder('documentName', procurement[lang]['documentNamePlaceholder']);
     updateElementPlaceholder('startDate', procurement[lang]['startDatePlaceholder']);
     updateElementPlaceholder('endDate', procurement[lang]['endDatePlaceholder']);
-    updateElement('type-opt', procurement[lang]['type-opt']);
-    updateElement('direction-opt', procurement[lang]['direction-opt']);
-    updateElement('category-opt', procurement[lang]['category-opt']);
 
 
     const kazButton = document.getElementById('kazButton');
