@@ -359,6 +359,7 @@ function updateContent(language) {
     updateElementPlaceholder('startDate', procurement[lang]['startDatePlaceholder']);
     updateElementPlaceholder('endDate', procurement[lang]['endDatePlaceholder']);
 
+    fetchNews(1);
 
     const kazButton = document.getElementById('kazButton');
     const rusButton = document.getElementById('rusButton');
