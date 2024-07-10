@@ -276,7 +276,7 @@ function updateContent(language) {
             element.placeholder = placeholder;
         }
     }
-    
+
     updateElement('headerTitle', translations[lang]['headerTitle']);
     updateElement('aboutUsLink', translations[lang]['aboutUsLink']);
     updateElement('newsLink', translations[lang]['newsLink']);
@@ -284,10 +284,10 @@ function updateContent(language) {
     updateElement('procurementLink', translations[lang]['procurementLink']);
     updateElement('antiCorruptionLink', translations[lang]['antiCorruptionLink']);
     updateElement('vacanciesLink', translations[lang]['vacanciesLink']);
-    
+
     updateElement('resolutionTitle', translations[lang]['resolutionTitle']);
     updateElement('resolutionContent', translations[lang]['resolutionContent']);
-    
+
     updateElement('footerContacts', translations[lang]['footerContacts']);
     updateElement('FooterPhone', translations[lang]['footerPhone']);
     updateElement('FooterAddress', translations[lang]['footerAddress']);
@@ -350,7 +350,7 @@ function updateContent(language) {
     updateElement('job-opt2', vacancy[lang]['job-opt2']);
     updateElement('job-opt3', vacancy[lang]['job-opt3']);
     updateElement('job-opt4', vacancy[lang]['job-opt4']);
-    
+
     updateElement('procurementTitle', procurement[lang]['title']);
     updateElement('documentNameLabel', procurement[lang]['documentNameLabel']);
     updateElement('publicationPeriodLabel', procurement[lang]['publicationPeriodLabel']);
@@ -358,7 +358,6 @@ function updateContent(language) {
     updateElementPlaceholder('documentName', procurement[lang]['documentNamePlaceholder']);
     updateElementPlaceholder('startDate', procurement[lang]['startDatePlaceholder']);
     updateElementPlaceholder('endDate', procurement[lang]['endDatePlaceholder']);
-
 
     const kazButton = document.getElementById('kazButton');
     const rusButton = document.getElementById('rusButton');
@@ -370,15 +369,24 @@ function updateContent(language) {
 
     localStorage.setItem('preferredLanguage', lang);
 
+    // Get current document or news ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const documentId = urlParams.get('id');
+    const newsId = urlParams.get('id');
 
+    // Only call fetch functions if the ID exists
     if (typeof fetchNews === 'function') {
         fetchNews(1);
     }
-    if (typeof fetchNewsDetails === 'function') {
-        fetchNewsDetails(1);
+    if (typeof fetchNewsDetails === 'function' && newsId) {
+        fetchNewsDetails(newsId);
     }
-
-
+    if (typeof fetchDocuments === 'function') {
+        fetchDocuments();
+    }
+    if (typeof fetchDocumentDetails === 'function' && documentId) {
+        fetchDocumentDetails(documentId);
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -403,3 +411,4 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('preferredLanguage', 'rus');
     });
 });
+

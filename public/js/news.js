@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function fetchNews(page) {
-    const limit = 3; // Number of news items per page
+    const limit = 10; // Number of news items per page
     const url = `/api/news?page=${page}&limit=${limit}`;
 
     fetch(url)
@@ -59,3 +59,4 @@ function renderNews(newsData) {
         newsContainer.appendChild(newsItem);
     });
 }
+

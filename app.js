@@ -20,7 +20,7 @@ app.use(express.static('public'));
 
 app.get('/api/news', async (req, res) => {
     const { page, limit } = req.query;
-    const offset = (page - 1) * limit; 
+    const offset = (page - 1) * limit;
 
     const client = new Client(dbConfig);
     try {
@@ -57,6 +57,61 @@ app.get('/api/news/:id', async (req, res) => {
     }
 });
 
+app.get('/api/procurement', async (req, res) => {
+    const { documentName, startDate, endDate } = req.query;
+    let query = 'SELECT * FROM procurement';
+
+    // Filter by document name
+    if (documentName) {
+        query += ` WHERE title_kz ILIKE '%${documentName}%' OR title_ru ILIKE '%${documentName}%'`;
+    }
+
+    // Filter by publication period
+    if (startDate && endDate) {
+        if (documentName) {
+            query += ' AND';
+        } else {
+            query += ' WHERE';
+        }
+        query += ` date BETWEEN '${startDate}' AND '${endDate}'`;
+    }
+
+    query += ' ORDER BY date DESC';
+
+    const client = new Client(dbConfig);
+    try {
+        await client.connect();
+        const result = await client.query(query);
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error fetching documents:', err);
+        res.status(500).json({ error: 'Internal server error' });
+    } finally {
+        await client.end();
+    }
+});
+
+app.get('/api/procurement/:id', async (req, res) => {
+    const { id } = req.params;
+
+    const client = new Client(dbConfig);
+    try {
+        await client.connect();
+        const result = await client.query('SELECT * FROM procurement WHERE id = $1', [id]);
+
+        if (result.rows.length === 0) {
+            return res.status(404).json({ error: 'Document not found' });
+        }
+
+        const document = result.rows[0];
+        res.json(document);
+    } catch (err) {
+        console.error('Error fetching document:', err);
+        res.status(500).json({ error: 'Internal server error' });
+    } finally {
+        await client.end();
+    }
+});
 
 // Serve static files
 app.get('/', (req, res) => {
@@ -79,9 +134,12 @@ app.get('/news-details', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'news-details.html'));
 });
 
-
 app.get('/procurement', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'procurement.html'));
+});
+
+app.get('/procurement-details', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'procurement-details.html'));
 });
 
 app.get('/systems', (req, res) => {
