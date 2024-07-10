@@ -359,7 +359,6 @@ function updateContent(language) {
     updateElementPlaceholder('startDate', procurement[lang]['startDatePlaceholder']);
     updateElementPlaceholder('endDate', procurement[lang]['endDatePlaceholder']);
 
-    fetchNews(1);
 
     const kazButton = document.getElementById('kazButton');
     const rusButton = document.getElementById('rusButton');
@@ -370,6 +369,16 @@ function updateContent(language) {
     }
 
     localStorage.setItem('preferredLanguage', lang);
+
+
+    if (typeof fetchNews === 'function') {
+        fetchNews(1);
+    }
+    if (typeof fetchNewsDetails === 'function') {
+        fetchNewsDetails(1);
+    }
+
+
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -386,11 +395,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     kazButton.addEventListener('click', function() {
         updateContent('kaz');
-        localStorage.setItem('preferredLanguage', 'kaz'); 
+        localStorage.setItem('preferredLanguage', 'kaz');
     });
 
     rusButton.addEventListener('click', function() {
         updateContent('rus');
-        localStorage.setItem('preferredLanguage', 'rus'); 
+        localStorage.setItem('preferredLanguage', 'rus');
     });
 });

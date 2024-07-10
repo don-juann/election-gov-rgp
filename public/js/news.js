@@ -14,65 +14,48 @@ function fetchNews(page) {
             return response.json();
         })
         .then(newsData => {
-            const newsContainer = document.getElementById('news-field');
-            newsContainer.innerHTML = '';
-
-            newsData.forEach(news => {
-                const newsItem = document.createElement('div');
-                newsItem.classList.add('news-item');
-
-                const preferredLang = localStorage.getItem('preferredLanguage');
-                if (preferredLang === 'kaz') {
-                    title = news.title_kz || news.title; 
-                    description = news.description_kz 
-                    short_description = news.short_description_kz
-                } else if (preferredLang === 'rus') {
-                    title = news.title_ru || news.title;
-                    description = news.description_ru
-                    short_description = news.short_description_ru
-                }
-
-                newsItem.innerHTML = `
-                    <a href="#">
-                        <img src="${news.image}" alt="News Image">
-                        <div class="news-item-content">
-                            <h3 class="news-item-title">${title}</h3>
-                            <p class="news-item-date">${news.date.slice(0, 10)}</p>
-                            <p class="news-item-description">${short_description}</p>
-                        </div>
-                    </a>
-                `;
-                newsContainer.appendChild(newsItem);
-            });
-
-            // Assuming you have a function to create pagination controls
-            // createPaginationControls(page, totalPages);
+            renderNews(newsData);
+            document.getElementById('loading-spinner').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
         })
         .catch(error => {
             console.error('Error fetching news:', error);
         });
 }
 
+function renderNews(newsData) {
+    const newsContainer = document.getElementById('news-field');
+    newsContainer.innerHTML = '';
 
-function createPaginationControls(currentPage, totalPages) {
-    const paginationContainer = document.getElementById('pagination');
-    paginationContainer.innerHTML = '';
+    newsData.forEach(news => {
+        const newsItem = document.createElement('div');
+        newsItem.classList.add('news-item');
 
-    const prevButton = document.createElement('button');
-    prevButton.textContent = 'Previous';
-    prevButton.addEventListener('click', () => {
-        if (currentPage > 1) {
-            fetchNews(currentPage - 1);
+        const preferredLang = localStorage.getItem('preferredLanguage');
+        let title, description, short_description;
+
+        // Determine the correct language based on preferredLang
+        if (preferredLang === 'kaz') {
+            title = news.title_kz; 
+            description = news.description_kz;
+            short_description = news.short_description_kz;
+        } else {
+            title = news.title_ru;
+            description = news.description_ru;
+            short_description = news.short_description_ru;
         }
-    });
-    paginationContainer.appendChild(prevButton);
 
-    const nextButton = document.createElement('button');
-    nextButton.textContent = 'Next';
-    nextButton.addEventListener('click', () => {
-        if (currentPage < totalPages) {
-            fetchNews(currentPage + 1);
-        }
+        // Construct the HTML for each news item
+        newsItem.innerHTML = `
+            <a href="/news-details?id=${news.id}">
+                <img src="${news.image}" alt="News Image">
+                <div class="news-item-content">
+                    <h3 class="news-item-title">${title}</h3>
+                    <p class="news-item-date">${news.date.slice(0, 10)}</p>
+                    <p class="news-item-description">${short_description}</p>
+                </div>
+            </a>
+        `;
+        newsContainer.appendChild(newsItem);
     });
-    paginationContainer.appendChild(nextButton);
 }

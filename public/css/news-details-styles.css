@@ -1,0 +1,21 @@
+.news-details-section {
+    display: flex;
+    justify-content: center;
+}
+.news-details-container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+.news-details-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.news-details-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.news-details-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}

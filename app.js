@@ -35,7 +35,30 @@ app.get('/api/news', async (req, res) => {
     }
 });
 
-// Serve static files for other routes
+app.get('/api/news/:id', async (req, res) => {
+    const { id } = req.params;
+
+    const client = new Client(dbConfig);
+    try {
+        await client.connect();
+        const result = await client.query('SELECT * FROM news WHERE id = $1', [id]);
+
+        if (result.rows.length === 0) {
+            return res.status(404).json({ error: 'News not found' });
+        }
+
+        const news = result.rows[0];
+        res.json(news);
+    } catch (err) {
+        console.error('Error fetching news:', err);
+        res.status(500).json({ error: 'Internal server error' });
+    } finally {
+        await client.end();
+    }
+});
+
+
+// Serve static files
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'rgp.html'));
 });
@@ -52,6 +75,11 @@ app.get('/news', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'news.html'));
 });
 
+app.get('/news-details', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'news-details.html'));
+});
+
+
 app.get('/procurement', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'procurement.html'));
 });
@@ -62,6 +90,10 @@ app.get('/systems', (req, res) => {
 
 app.get('/vacancy', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'vacancy.html'));
+});
+
+app.get('/adminpage', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'adminpage.html'));
 });
 
 app.listen(port, () => {
