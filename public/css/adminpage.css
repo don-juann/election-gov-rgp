@@ -1,0 +1,109 @@
+/* adminpage.css */
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+*:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+body {
+    background-color: #e5e5e5;
+    color: #000;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #14213d;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #14213d;
+    text-decoration: underline;
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.col-md-6 {
+    padding: 15px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #14213d;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="date"],
+textarea {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #14213d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #fca311;
+}
+
+#existingNews,
+#existingDocuments {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+#existingNews h3,
+#existingDocuments h3 {
+    color: #14213d;
+    margin-bottom: 10px;
+}
+
+#existingNews .news-item,
+#existingDocuments .document-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+
+@media (max-width: 767px) {
+    .col-md-6 {
+        padding: 0;
+    }
+}
