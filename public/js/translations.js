@@ -1,3 +1,5 @@
+// Массивы хранящие переводы на русском и казахском языках
+
 const translations = {
     'kaz': {
         'scrollTop':'Төбеге',
@@ -189,44 +191,12 @@ const vacancy = {
     'kaz': {
         'intro-header': 'Құрметті пайдаланушы!',
         'intro-message': 'Талаптар: <ul> <li>Сенімді қарым-қатынас және келіссөздер дағдылары.</li> <li>Мақсаттар мен нәтижелерге қол жеткізуге деген ұмтылыс.</li> <li>CRM жүйелерімен жұмыс істеудің негізгі принциптерін білу құпталады.</li> </ul> Шарттар: <ul> <li>ҚР ЕК сәйкес ресми жұмысқа орналастыру.</li> <li>Бәсекеге қабілетті жалақы + жоспарды орындау үшін бонустар.</li> <li>Қарқынды дамып келе жатқан компаниядағы даму және кәсіби өсу.</li> <li>Кеңседе жұмыс істеудің ыңғайлы шарттары.</li> </ul>',
-        'FIO-label': 'Толық аты-жөні',
-        'email-label': 'Электронды пошта',
-        'phone-label': 'Байланыс телефоны',
-        'xp-label': 'Жұмыс тәжірибесі',
-        'job-label': 'Лауазымы',
-        'vacancy-submit': 'Жіберу',
-        'xp-opt': 'Таңдау',
-        'xp-opt1': 'Тәжірибе жоқ',
-        'xp-opt2': '1-3 жыл арасында',
-        'xp-opt3': '3-6 жыл арасында',
-        'xp-opt4': '6 жылдан көп',
-        'job-opt': 'Таңдау',
-        'job-opt1': '',
-        'job-opt2': '',
-        'job-opt3': '',
-        'job-opt4': '',
-        // Add more labels as needed
+        'contact-phone': 'Байланысу нөмірі'
     },
     'rus': {
         'intro-header': 'Уважаемый пользователь!',
         'intro-message': 'Требования: <br> <ul> <li>Уверенные навыки коммуникации и переговоров.</li> <li>Желание достигать поставленных целей и результатов.</li> <li>Знание базовых принципов работы с CRM системами приветствуется.</li> </ul> Условия: <br> <ul> <li>Официальное трудоустройство согласно ТК РК.</li> <li>Конкурентоспособная заработная плата + бонусы за выполнение плана.</li> <li>Развитие и профессиональный рост в динамично развивающейся компании.</li> <li>Комфортные условия работы в офисе.</li> </ul>',
-        'FIO-label': 'ФИО',
-        'email-label': 'Электронная почта',
-        'phone-label': 'Контактный телефон',
-        'xp-label': 'Опыт работы',
-        'job-label': 'Должность',
-        'vacancy-submit': 'Отправить',
-        'xp-opt': 'Выбрать',
-        'xp-opt1': 'Нет опыта',
-        'xp-opt2': 'От 1 до 3 лет',
-        'xp-opt3': 'От 3 до 6 лет',
-        'xp-opt4': 'Более 6 лет',
-        'job-opt': 'Выбрать',
-        'job-opt1': '',
-        'job-opt2': '',
-        'job-opt3': '',
-        'job-opt4': '',
-        // Add more labels as needed
+        'contact-phone': 'Номер для связи'
     }
 };
 
@@ -252,7 +222,7 @@ const procurement = {
     }
 };
 
-
+// Функция для изменения содержания элементов HTML по соответсвующему ID
 function updateContent(language) {
     const lang = language.toLowerCase();
 
@@ -277,84 +247,69 @@ function updateContent(language) {
         }
     }
 
-    updateElement('headerTitle', translations[lang]['headerTitle']);
-    updateElement('aboutUsLink', translations[lang]['aboutUsLink']);
-    updateElement('newsLink', translations[lang]['newsLink']);
-    updateElement('infoSystemsLink', translations[lang]['infoSystemsLink']);
-    updateElement('procurementLink', translations[lang]['procurementLink']);
-    updateElement('antiCorruptionLink', translations[lang]['antiCorruptionLink']);
-    updateElement('vacanciesLink', translations[lang]['vacanciesLink']);
+    // Массив хранящий ID всех элементов
+    const elementsToUpdate = [
+        ['headerTitle', 'headerTitle'],
+        ['aboutUsLink', 'aboutUsLink'],
+        ['newsLink', 'newsLink'],
+        ['infoSystemsLink', 'infoSystemsLink'],
+        ['procurementLink', 'procurementLink'],
+        ['antiCorruptionLink', 'antiCorruptionLink'],
+        ['vacanciesLink', 'vacanciesLink'],
+        ['resolutionTitle', 'resolutionTitle'],
+        ['resolutionContent', 'resolutionContent'],
+        ['footerContacts', 'footerContacts'],
+        ['FooterPhone', 'footerPhone'],
+        ['FooterAddress', 'footerAddress'],
+        ['footerAbout', 'footerAbout'],
+        ['footerTitle', 'footerTitle'],
+        ['footerRights', 'footerRights'],
+        ['heads', 'heads'],
+        ['principal', 'principal'],
+        ['principal-name', 'principal-name'],
+        ['principal-sub1-name', 'principal-sub1-name'],
+        ['principal-sub2-name', 'principal-sub2-name'],
+        ['about-breadcrumb', 'about-breadcrumb', breadcrumbs],
+        ['news-breadcrumb', 'news-breadcrumb', breadcrumbs],
+        ['systems-breadcrumb', 'systems-breadcrumb', breadcrumbs],
+        ['procurement-breadcrumb', 'procurement-breadcrumb', breadcrumbs],
+        ['anticor-breadcrumb', 'anticor-breadcrumb', breadcrumbs],
+        ['vacancy-breadcrumb', 'vacancy-breadcrumb', breadcrumbs],
+        ['systemh1', 'systemh1', systems],
+        ['systemh2', 'systemh2', systems],
+        ['systemh3', 'systemh3', systems],
+        ['systemh4', 'systemh4', systems],
+        ['systemp1', 'systemp1', systems],
+        ['systemp2', 'systemp2', systems],
+        ['systemp3', 'systemp3', systems],
+        ['systemp4', 'systemp4', systems],
+        ['policy', 'policy', anticor],
+        ['policy-text', 'policy-text', anticor],
+        ['link-header', 'link-header', anticor],
+        ['links', 'links', anticor],
+        ['scrollTop', 'scrollTop'],
+        ['charterTitle', 'charterTitle', charterElements],
+        ['intro-header', 'intro-header', vacancy],
+        ['intro-message', 'intro-message', vacancy],
+        ['contact-phone', 'contact-phone', vacancy],
+        ['procurementTitle', 'title', procurement],
+        ['documentNameLabel', 'documentNameLabel', procurement],
+        ['publicationPeriodLabel', 'publicationPeriodLabel', procurement],
+        ['submitButton', 'submitButton', procurement],
+    ];
 
-    updateElement('resolutionTitle', translations[lang]['resolutionTitle']);
-    updateElement('resolutionContent', translations[lang]['resolutionContent']);
+    elementsToUpdate.forEach(([id, key, source = translations]) => {
+        updateElement(id, source[lang][key]);
+    });
 
-    updateElement('footerContacts', translations[lang]['footerContacts']);
-    updateElement('FooterPhone', translations[lang]['footerPhone']);
-    updateElement('FooterAddress', translations[lang]['footerAddress']);
-    updateElement('footerAbout', translations[lang]['footerAbout']);
-    updateElement('footerTitle', translations[lang]['footerTitle']);
-    updateElement('footerRights', translations[lang]['footerRights']);
-
-    updateElement('heads', translations[lang]['heads']);
-    updateElement('principal', translations[lang]['principal']);
-    updateElement('principal-name', translations[lang]['principal-name']);
-    updateElement('principal-sub1-name', translations[lang]['principal-sub1-name']);
-    updateElement('principal-sub2-name', translations[lang]['principal-sub2-name']);
-    updateElementsByClass('principal-sub', translations[lang]['principal-sub']);
-
-    updateElement('about-breadcrumb', breadcrumbs[lang]['about-breadcrumb']);
-    updateElement('news-breadcrumb', breadcrumbs[lang]['news-breadcrumb']);
-    updateElement('systems-breadcrumb', breadcrumbs[lang]['systems-breadcrumb']);
-    updateElement('procurement-breadcrumb', breadcrumbs[lang]['procurement-breadcrumb']);
-    updateElement('anticor-breadcrumb', breadcrumbs[lang]['anticor-breadcrumb']);
-    updateElement('vacancy-breadcrumb', breadcrumbs[lang]['vacancy-breadcrumb']);
-    updateElementsByClass('main-breadcrumb', breadcrumbs[lang]['main-breadcrumb']);
-
-    updateElement('systemh1', systems[lang]['systemh1']);
-    updateElement('systemh2', systems[lang]['systemh2']);
-    updateElement('systemh3', systems[lang]['systemh3']);
-    updateElement('systemh4', systems[lang]['systemh4']);
-    updateElement('systemp1', systems[lang]['systemp1']);
-    updateElement('systemp2', systems[lang]['systemp2']);
-    updateElement('systemp3', systems[lang]['systemp3']);
-    updateElement('systemp4', systems[lang]['systemp4']);
-
-    updateElement('policy', anticor[lang]['policy']);
-    updateElement('policy-text', anticor[lang]['policy-text']);
-    updateElement('link-header', anticor[lang]['link-header']);
-    updateElement('links', anticor[lang]['links']);
-
-    updateElement('scrollTop', translations[lang]['scrollTop']);
-
-    updateElement('charterTitle', charterElements[lang]['charterTitle']);
     for (let i = 1; i <= 13; i++) {
         updateElement(`list-item-${i}`, charterElements[lang][`list-item-${i}`]);
         updateElement(`description-${i}`, charterElements[lang][`desc${i}`]);
     }
 
-    updateElement('intro-header', vacancy[lang]['intro-header']);
-    updateElement('intro-message', vacancy[lang]['intro-message']);
-    updateElement('FIO-label', vacancy[lang]['FIO-label']);
-    updateElement('email-label', vacancy[lang]['email-label']);
-    updateElement('phone-label', vacancy[lang]['phone-label']);
-    updateElement('xp-label', vacancy[lang]['xp-label']);
-    updateElement('job-label', vacancy[lang]['job-label']);
-    updateElement('vacancy-submit', vacancy[lang]['vacancy-submit']);
-    updateElement('xp-opt', vacancy[lang]['xp-opt']);
-    updateElement('xp-opt1', vacancy[lang]['xp-opt1']);
-    updateElement('xp-opt2', vacancy[lang]['xp-opt2']);
-    updateElement('xp-opt3', vacancy[lang]['xp-opt3']);
-    updateElement('xp-opt4', vacancy[lang]['xp-opt4']);
-    updateElement('job-opt', vacancy[lang]['job-opt']);
-    updateElement('job-opt1', vacancy[lang]['job-opt1']);
-    updateElement('job-opt2', vacancy[lang]['job-opt2']);
-    updateElement('job-opt3', vacancy[lang]['job-opt3']);
-    updateElement('job-opt4', vacancy[lang]['job-opt4']);
+    updateElementsByClass('principal-sub', translations[lang]['principal-sub']);
+    updateElementsByClass('main-breadcrumb', breadcrumbs[lang]['main-breadcrumb']);
 
-    updateElement('procurementTitle', procurement[lang]['title']);
-    updateElement('documentNameLabel', procurement[lang]['documentNameLabel']);
-    updateElement('publicationPeriodLabel', procurement[lang]['publicationPeriodLabel']);
-    updateElement('submitButton', procurement[lang]['submitButton']);
     updateElementPlaceholder('documentName', procurement[lang]['documentNamePlaceholder']);
     updateElementPlaceholder('startDate', procurement[lang]['startDatePlaceholder']);
     updateElementPlaceholder('endDate', procurement[lang]['endDatePlaceholder']);
@@ -369,14 +324,13 @@ function updateContent(language) {
 
     localStorage.setItem('preferredLanguage', lang);
 
-    // Get current document or news ID from the URL
+    // if statement для смены языка для элементов базы данных
     const urlParams = new URLSearchParams(window.location.search);
     const documentId = urlParams.get('id');
     const newsId = urlParams.get('id');
 
-    // Only call fetch functions if the ID exists
     if (typeof fetchNews === 'function') {
-        fetchNews(1);
+        fetchNews();
     }
     if (typeof fetchNewsDetails === 'function' && newsId) {
         fetchNewsDetails(newsId);
@@ -389,6 +343,7 @@ function updateContent(language) {
     }
 }
 
+// Определить язык при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
     let storedLang = localStorage.getItem('preferredLanguage');
 

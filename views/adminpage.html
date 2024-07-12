@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="/css/adminpage.css">
 </head>
 <body>
-    <h1 class="text-center mt-5 mb-3">Страница Администратора</h1>
+    <div class="text-center mt-5 mb-2">
+        <h1>Страница Администратора</h1>
+        <a href="/">На главную</a>
+    </div>
 
     <div class="container-fluid p-2 text-center">
         <div class="row">
@@ -17,14 +20,14 @@
                 <h2>Добавить новости</h2>
                 <form id="addNewsForm">
                     <!-- News inputs -->
-                    <input type="text" name="title_ru" placeholder="Название на русском">
-                    <input type="text" name="title_kz" placeholder="Название на казахском">
-                    <textarea name="description_ru" placeholder="Описание на русском"></textarea>
-                    <textarea name="description_kz" placeholder="Описание на казахском"></textarea>
-                    <input type="text" name="short_description_ru" placeholder="Краткое описание на русском">
-                    <input type="text" name="short_description_kz" placeholder="Краткое описание на казахском">
-                    <input type="text" name="image" placeholder="URL изображения">
-                    <input type="datetime-local" name="date">
+                    <input type="text" name="title_ru" placeholder="Название на русском" required>
+                    <input type="text" name="title_kz" placeholder="Название на казахском" required>
+                    <textarea name="description_ru" placeholder="Описание на русском" required></textarea>
+                    <textarea name="description_kz" placeholder="Описание на казахском" required></textarea>
+                    <input type="text" name="short_description_ru" placeholder="Краткое описание на русском" required>
+                    <input type="text" name="short_description_kz" placeholder="Краткое описание на казахском" required>
+                    <input type="text" name="image" placeholder="URL изображения" required>
+                    <input type="datetime-local" name="date" id="newsDate" required>
                     <button type="submit">Добавить новость</button>
                 </form>
             </div>
@@ -32,11 +35,11 @@
                 <h2>Добавить документ</h2>
                 <form id="addDocumentForm">
                     <input type="text" name="title_ru" placeholder="Название на русском" required>
-                    <input type="text" name="title_kz" placeholder="Название на казахском">
-                    <textarea name="content_ru" placeholder="Содержание на русском" rows="4" cols="50"></textarea>
-                    <textarea name="content_kz" placeholder="Содержание на казахском" rows="4" cols="50"></textarea>
-                    <input type="datetime-local" name="date" required>
-                    <button type="submit">Добавить</button>
+                    <input type="text" name="title_kz" placeholder="Название на казахском" required>
+                    <textarea name="content_ru" placeholder="Содержание на русском" rows="4" cols="50" required></textarea>
+                    <textarea name="content_kz" placeholder="Содержание на казахском" rows="4" cols="50" required></textarea>
+                    <input type="datetime-local" name="date" id="documentDate" required>
+                    <button type="submit">Добавить документ</button>
                 </form>
             </div>
             

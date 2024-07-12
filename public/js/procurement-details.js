@@ -1,3 +1,4 @@
+// if statement для проверки наличия ID
 document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const documentId = urlParams.get('id');
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Получить документ из базы данных
 function fetchDocumentDetails(documentId) {
     const url = `/api/procurement/${documentId}`;
 
@@ -27,6 +29,7 @@ function fetchDocumentDetails(documentId) {
         });
 }
 
+// Показать документ из базы данных
 function displayDocumentDetails(documentDetails) {
     const documentTitle = document.getElementById('document-title');
     const documentContent = document.getElementById('document-content');

@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const addNewsForm = document.getElementById('addNewsForm');
     const addDocumentForm = document.getElementById('addDocumentForm');
 
+    // Создать новость и добавить в базу данных
     addNewsForm.addEventListener('submit', function (event) {
         event.preventDefault();
         const formData = new FormData(addNewsForm);
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(data => {
             console.log('News added:', data);
-            fetchExistingNews(); // Call fetchExistingNews after adding news
+            fetchExistingNews();
             addNewsForm.reset();
         })
         .catch(error => {
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Создать документ и добавить в базу данных
     addDocumentForm.addEventListener('submit', function (event) {
         event.preventDefault();
         const formData = new FormData(addDocumentForm);
@@ -65,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(data => {
             console.log('Document added:', data);
-            fetchExistingDocuments(); // Ensure fetchExistingDocuments is called after adding document
+            fetchExistingDocuments();
             addDocumentForm.reset();
         })
         .catch(error => {
@@ -73,13 +75,28 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     
+    // Поставить текущее время на соотвествующие поля
+    function setCurrentDateTimeLocal() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = ('0' + (now.getMonth() + 1)).slice(-2);
+        const day = ('0' + now.getDate()).slice(-2);
+        const hours = ('0' + now.getHours()).slice(-2);
+        const minutes = ('0' + now.getMinutes()).slice(-2);
+        const currentDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
+
+        document.getElementById('newsDate').value = currentDateTime;
+        document.getElementById('documentDate').value = currentDateTime;
+    }
+
+    setCurrentDateTimeLocal();
 
     fetchExistingNews();
     fetchExistingDocuments(); 
 });
 
 
-
+// Получить существующие новости
 function fetchExistingNews() {
     const limit = 10; // Adjust the limit as needed
     fetch(`/api/news?limit=${limit}`)
@@ -97,6 +114,7 @@ function fetchExistingNews() {
         });
 }
 
+// Получить существующие документы
 function fetchExistingDocuments() {
     fetch('/api/procurement')
         .then(response => {
@@ -113,6 +131,7 @@ function fetchExistingDocuments() {
         });
 }
 
+// Показать существующие новости
 function displayExistingNews(newsData) {
     const existingNewsContainer = document.getElementById('existingNews');
     existingNewsContainer.innerHTML = '';
@@ -135,6 +154,7 @@ function displayExistingNews(newsData) {
     });
 }
 
+// Показать существующие документы
 function displayExistingDocuments(documentsData) {
     const existingDocumentsContainer = document.getElementById('existingDocuments');
     existingDocumentsContainer.innerHTML = '';
@@ -157,6 +177,7 @@ function displayExistingDocuments(documentsData) {
     });
 }
 
+//Удалить новость по id
 function deleteNews(newsId) {
     if (confirm('Вы действительно хотите удалить эту новость?')) {
         fetch(`/api/news/${newsId}`, {
@@ -178,6 +199,7 @@ function deleteNews(newsId) {
     }
 }
 
+//Удалить документ по id
 function deleteDocument(documentId) {
     if (confirm('Вы действительно хотите удалить этот документ?')) {
         fetch(`/api/procurement/${documentId}`, {

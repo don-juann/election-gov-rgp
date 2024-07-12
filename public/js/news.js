@@ -1,10 +1,12 @@
+// Применить функцию при загрузке страницы
 document.addEventListener('DOMContentLoaded', function () {
-    fetchNews(1); // Fetch news for the first page initially
+    fetchNews(); 
 });
 
-function fetchNews(page) {
-    const limit = 10; // Number of news items per page
-    const url = `/api/news?page=${page}&limit=${limit}`;
+// Получить новости из базы данных
+function fetchNews() {
+    const limit = 10;
+    const url = `/api/news?&limit=${limit}`;
 
     fetch(url)
         .then(response => {

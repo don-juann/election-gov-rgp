@@ -1,5 +1,6 @@
+// Применить функции при загрузке страницы
 document.addEventListener('DOMContentLoaded', function () {
-    fetchDocuments(); // Fetch all documents when the page loads
+    fetchDocuments(); 
 
     const form = document.querySelector('#searchForm');
     form.addEventListener('submit', function (event) {
@@ -9,10 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const startDate = formData.get('startDate');
         const endDate = formData.get('endDate');
 
-        fetchDocuments(documentName, startDate, endDate); // Fetch documents based on filters
+        fetchDocuments(documentName, startDate, endDate);
     });
 });
 
+// Получить документы из базы данных
 function fetchDocuments(documentName = '', startDate = '', endDate = '') {
     let url = '/api/procurement';
     const params = new URLSearchParams();
@@ -36,6 +38,7 @@ function fetchDocuments(documentName = '', startDate = '', endDate = '') {
         });
 }
 
+// Показать документы из базы данных
 function renderDocuments(documents) {
     const resultsContainer = document.querySelector('.results-container');
     resultsContainer.innerHTML = '';

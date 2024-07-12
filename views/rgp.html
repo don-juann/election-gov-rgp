@@ -6,25 +6,33 @@
     <title>РГП "ИТЦ ЦИК РК"</title>
     <link rel="icon" href="/source/favicon.ico">
     <!-- Bootstrap CSS -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style" crossorigin="anonymous">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" as="script" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/rgp-styles.css">
+    <style>
+        body {
+            display: none;
+        }
+    </style>
+        
 </head>
 
 <body>
     <div class="scrollTop" onclick="scrollToTop()" style="z-index: 99" id="scrollTop"></div>
 
-    <!-- logo and language choice -->
+    <!-- Логотип и выбор языка -->
     <header class="bg-light py-2">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-3 col-md-3 d-flex flex-row align-items-center">
-                    <a href="/"><img width="75" src="/source/logo.png" alt="Logo"></a>
-                    <a class="mx-1" href="/"><img width="75" src="/source/kzmap.png" alt="Logo"></a>
+                    <a href="/"><img width="75" src="/source/logo.png" alt="Логотип"></a>
+                    <a class="mx-1" href="/"><img width="75" src="/source/kzmap.png" alt="Логотип"></a>
                 </div>
                 <div class="col-6 col-md-6 text-center">
-                    <h5 id="headerTitle">РГП «Инженерно-технический центр <br> Центральной избирательной комиссии Республики Казахстан»</h5>
+                    <h5 id="headerTitle"></h5>
                 </div>
                 <div class="col-3 col-md-3 text-center">
                     <button class="btn" id="kazButton">ҚАЗ</button>
@@ -34,7 +42,7 @@
         </div>
     </header>
 
-    <!-- navbar and toggle -->
+    <!-- Навигационное меню и переключатель -->
     <nav class="navbar navbar-expand-lg navbar-light bg-info sticky-top py-0">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -44,19 +52,19 @@
             
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link px-2" href="/about" id="aboutUsLink">О нас</a></li>
-                    <li class="nav-item"><a class="nav-link px-2" href="/news" id="newsLink">Новости</a></li>
-                    <li class="nav-item"><a class="nav-link px-2" href="/systems" id="infoSystemsLink">Информационные системы</a></li>
-                    <li class="nav-item"><a class="nav-link px-2" href="/procurement" id="procurementLink">Государственные закупки</a></li>
-                    <li class="nav-item"><a class="nav-link px-2" href="/anticorruption" id="antiCorruptionLink">Противодействие коррупции</a></li>
-                    <li class="nav-item"><a class="nav-link px-2" href="/vacancy" id="vacanciesLink">Вакансии</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="/about" id="aboutUsLink"></a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="/news" id="newsLink"></a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="/systems" id="infoSystemsLink"></a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="/procurement" id="procurementLink"></a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="/anticorruption" id="antiCorruptionLink"></a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="/vacancy" id="vacanciesLink"></a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- CAROUSEL NEWS -->
-    <div class="container-fluid bg-white py-3">
+    <!-- Карусель новостей -->
+    <!-- <div class="container-fluid bg-white py-3">
         <div id="carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -96,16 +104,16 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div>
+    </div> -->
 
     <hr>
     
-    <!-- Ustav -->
+    <!-- Устав -->
     <div class="container-fluid px-0 bg-white">
         <div class="p-5">
             <h4 class="text-center" id="charterTitle">Устав РГП «ИТЦ ЦИК РК»</h4>
             <div class="row py-3" style="padding: 0 10% 0 10%;">
-                <!-- Bullet points -->
+                <!-- Маркеры -->
                 <div class="col-md-4 mb-2">
                     <div class="list-group" id="list-tab" role="tablist">
                         <a class="list-group-item list-group-item-action active" id="list-item-1" data-bs-toggle="list" href="#description-1" role="tab" aria-controls="description-1"></a>
@@ -123,7 +131,7 @@
                         <a class="list-group-item list-group-item-action" id="list-item-13" data-bs-toggle="list" href="#description-13" role="tab" aria-controls="description-13"></a>
                     </div>
                 </div>
-                <!-- Description -->
+                <!-- Описание -->
                 <div class="col-md-8">
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="description-1" role="tabpanel" aria-labelledby="list-item-1">
@@ -172,21 +180,21 @@
     </div>
     <hr>
     
-    <!-- Sponsors -->
+    <!-- Спонсоры -->
     <div class="container-fluid px-0">
         <div class="p-5">
             <div class="d-flex flex-row logos">
-                <img width="10%" src="/source/bitrix-logo.png" alt="sponsor1">
-                <img width="10%" src="/source/java-logo.png" alt="sponsor2">
-                <img width="10%" src="/source/mysql - logo.png" alt="sponsor3">
-                <img width="10%" src="/source/oracle - logo.png" alt="sponsor4">
-                <img width="10%" src="/source/delphi - logo.png" alt="sponsor5">
+                <img width="10%" src="/source/bitrix-logo.png" alt="спонсор1">
+                <img width="10%" src="/source/java-logo.png" alt="спонсор2">
+                <img width="10%" src="/source/mysql - logo.png" alt="спонсор3">
+                <img width="10%" src="/source/oracle - logo.png" alt="спонсор4">
+                <img width="10%" src="/source/delphi - logo.png" alt="спонсор5">
             </div>
         </div>
     </div>
     <hr>
 
-    <!-- Footer, Address, Map -->
+    <!-- Footer, Адрес, Карта -->
     <footer class="bg-dark text-white pt-5 pb-4">
         <div class="container">
             <div class="row">
@@ -219,7 +227,13 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script src="/js/translations.js"></script>
-    <script src="/js/scripts.js"></script>
     <script src="/js/carousel.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.display = "block";
+        });
+    </script>
+        
 </body>
 </html>

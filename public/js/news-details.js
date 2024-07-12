@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Получить данные из базы данных
 function fetchNewsDetails(newsId) {
     const url = `/api/news/${newsId}`;
 
@@ -30,6 +31,7 @@ function fetchNewsDetails(newsId) {
         });
 }
 
+// Показать элементы новости из базы данных
 function displayNewsDetails(news) {
     const newsTitle = document.getElementById('news-title');
     const newsImage = document.getElementById('news-image');
